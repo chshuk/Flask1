@@ -11,7 +11,8 @@ app = Flask(__name__)
 app.register_blueprint(users_app, url_prefix="/users")
 app.register_blueprint(reports, url_prefix="/reports")
 app.register_blueprint(articles_app, url_prefix="/articles")
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:////tmp/blog.db"
+
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db.init_app(app)
 
