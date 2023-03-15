@@ -38,7 +38,7 @@ def login():
 @login_required
 def logout():
     logout_user()
-    return 'Logout'
+    return redirect(url_for('auth_app.login'))
 
 
 @auth_app.route("/secret")
