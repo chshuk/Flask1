@@ -1,7 +1,6 @@
 from flask import Blueprint, render_template
 from werkzeug.exceptions import NotFound
 
-
 articles_app = Blueprint("articles_app", __name__)
 ARTICLES = {1: "Flask",
             2: "Django",
@@ -20,4 +19,4 @@ def article_details(article_id: int):
     except KeyError:
         raise NotFound(f"Article #{article_id} doesn't exist!")
     return render_template('articles/details.html', article_id=article_id,
-        title=title)
+                           title=title)
