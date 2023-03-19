@@ -7,6 +7,7 @@ from blog.views.articles import articles_app
 from blog.models.database import db
 from blog.views.auth import auth_app, login_manager
 import os
+from flask_migrate import Migrate
 
 
 app = Flask(__name__)
@@ -26,6 +27,8 @@ app.register_blueprint(auth_app)
 db.init_app(app)
 
 login_manager.init_app(app)
+
+migrate = Migrate(app, db, compare_type=True)
 
 
 @app.route("/")
