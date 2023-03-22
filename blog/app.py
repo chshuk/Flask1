@@ -28,11 +28,11 @@ def register_extensions(app):
 
 
 def register_blueprints(app: Flask):
-    from blog.views.auth import auth_app
-    from blog.views.users import users_app
+    from blog.views.auth import auth
+    from blog.views.users import user
 
-    app.register_blueprint(users_app)
-    app.register_blueprint(auth_app)
+    app.register_blueprint(user)
+    app.register_blueprint(auth)
 
 
 def register_commands(app: Flask):
