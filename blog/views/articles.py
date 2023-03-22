@@ -18,5 +18,5 @@ def article_details(article_id: int):
         title = ARTICLES[article_id]
     except KeyError:
         raise NotFound(f"Article #{article_id} doesn't exist!")
-    return render_template('articles/details.html', article_id=article_id,
+    return render_template('articles/profile.html', article_id=article_id,
                            title=title)
