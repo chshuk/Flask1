@@ -1,4 +1,4 @@
-"""creste user model
+"""create user model
 
 Revision ID: 3fc056e5f477
 Revises: 2f15772923f5
