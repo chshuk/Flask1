@@ -11,12 +11,14 @@ def create_init_user():
 
     with app.app_context():
         db.session.add(
-            User(first_name='name',
+            User(first_name='admin',
                  last_name='surname',
-                 email='name@example.com',
-                 password=generate_password_hash('test123'))
+                 email='admin@example.com',
+                 password=generate_password_hash('1111'),
+                 is_staff=True)
         )
         db.session.commit()
+    click.echo(f'Created admin')
 
 
 @click.command('create-init-tags')
