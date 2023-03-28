@@ -6,7 +6,7 @@
 
 {% block body %}
     <h1>Hi, {{ user.first_name }}!</h1>
-    <h3>Author of article:</h3>
+    <h3>Author of article(s):</h3>
     {% for article in user.author.articles %}
         <ul>
             <li>
