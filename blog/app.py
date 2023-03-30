@@ -51,6 +51,7 @@ def register_blueprints(app: Flask):
     from blog.views.users import user
     from blog.views.author import author
     from blog.views.articles import article
+    from blog.views.face import face
     from blog.api.views import api_blueprint
     from blog import admin
 
@@ -58,6 +59,7 @@ def register_blueprints(app: Flask):
     app.register_blueprint(auth)
     app.register_blueprint(author)
     app.register_blueprint(article)
+    app.register_blueprint(face)
     app.register_blueprint(api_blueprint)
 
     admin.register_views()
