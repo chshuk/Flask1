@@ -26,7 +26,6 @@ Mako==1.2.4
 MarkupSafe==2.0.1
 marshmallow==3.2.1
 marshmallow-jsonapi==0.24.0
-mimesis==7.0.0
 packaging==23.0
 psycopg2-binary==2.9.5
 python-dotenv==0.17.1
